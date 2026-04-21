@@ -258,7 +258,7 @@ export const TopNav = (props) => {
               orientation="vertical"
               sx={{
                 borderColor: "neutral.500",
-                height: 36,
+                height: 44,
               }}
             />
           }
@@ -268,11 +268,12 @@ export const TopNav = (props) => {
             href={paths.index}
             sx={{
               display: "inline-flex",
-              height: 24,
-              width: 24,
+              alignItems: "center",
+              lineHeight: 0,
+              maxHeight: TOP_NAV_HEIGHT - 8,
             }}
           >
-            <Logo />
+            <Logo height={TOP_NAV_HEIGHT - 16} maxWidth={220} />
           </Box>
           {!mdDown && (
             <CippTenantSelector ref={tenantSelectorRef} refreshButton={true} tenantButton={true} />

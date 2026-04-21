@@ -4,6 +4,7 @@ import Head from "next/head";
 import { CippImageCard } from "../components/CippCards/CippImageCard";
 import { ApiGetCall } from "../api/ApiCall";
 import { useMemo } from "react";
+import { PRODUCT_FULL_BRAND_SRC } from "../constants/branding";
 
 const Page = () => {
   const orgData = ApiGetCall({
@@ -51,7 +52,7 @@ const Page = () => {
                 {(orgData.isSuccess || swaStatus.isSuccess) && Array.isArray(userRoles) && (
                   <CippImageCard
                     isFetching={false}
-                    imageUrl="/assets/illustrations/undraw_online_test_re_kyfx.svg"
+                    imageUrl={PRODUCT_FULL_BRAND_SRC}
                     text={
                       orgData?.data?.message ||
                       "You're not allowed to be here, or are logged in under the wrong account."

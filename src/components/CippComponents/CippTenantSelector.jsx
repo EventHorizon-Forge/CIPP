@@ -317,7 +317,7 @@ export const CippTenantSelector = React.forwardRef((props, ref) => {
             }}
             disabled={!currentTenant || currentTenant.value === "AllTenants"}
           >
-            <Tooltip title="Show Tenant Information">
+            <Tooltip title="Show organization details">
               <SvgIcon>
                 <BuildingOfficeIcon fontSize="inherit" />
               </SvgIcon>
@@ -334,10 +334,10 @@ export const CippTenantSelector = React.forwardRef((props, ref) => {
           sx={{ width: width ? width : "400px" }}
           placeholder={
             tenantList.isFetching
-              ? "Loading Tenants..."
+              ? "Loading organizations..."
               : tenantList.isError
-              ? `Error loading Tenants: ${getCippError(tenantList.error)}`
-              : "Select a Tenant"
+              ? `Error loading organizations: ${getCippError(tenantList.error)}`
+              : "Select organization"
           }
           value={currentTenant}
           onChange={(nv) => setSelectedTenant(nv)}
@@ -370,7 +370,7 @@ export const CippTenantSelector = React.forwardRef((props, ref) => {
               tenantList.refetch();
             }}
           >
-            <Tooltip title="Refresh tenant list">
+            <Tooltip title="Refresh organization list">
               <SvgIcon>
                 <Refresh fontSize="inherit" />
               </SvgIcon>

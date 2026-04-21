@@ -120,7 +120,7 @@ export const CippGDAPTenantSetup = (props) => {
           {createDefaults && (
             <Box>
               <Alert severity="warning">
-                The CIPP Defaults template is missing from the GDAP Role Templates. Create it now?
+                The default GDAP roles template is missing from the GDAP Role Templates. Create it now?
                 <Button
                   size="small"
                   variant="outlined"
@@ -137,7 +137,7 @@ export const CippGDAPTenantSetup = (props) => {
                     </SvgIcon>
                   }
                 >
-                  Create CIPP Defaults
+                  Create default template
                 </Button>
               </Alert>
               <CippApiResults apiObject={createCippDefaults} />

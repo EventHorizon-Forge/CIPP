@@ -13,7 +13,7 @@ const Page = () => {
       component: CippWizardOptionsList,
       componentProps: {
         title: "Select your setup method",
-        subtext: `This wizard will guide you through setting up CIPPs access to your client tenants. If this is your first time setting up CIPP you will want to choose the option "Create application for me and connect to my tenants",`,
+        subtext: `This wizard will guide you through setting up AXIOM access to your client tenants. If this is your first time setting up AXIOM you will want to choose the option "Create application for me and connect to my tenants",`,
         valuesKey: "SyncTool",
         options: [
           {

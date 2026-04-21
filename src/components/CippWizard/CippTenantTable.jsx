@@ -72,7 +72,7 @@ export const CippTenantTable = ({
       condition: (row) => row.displayName !== "*Partner Tenant",
     },
     {
-      label: "Refresh CIPPDB Cache",
+      label: "Refresh reporting database cache",
       type: "GET",
       url: `/api/ExecCIPPDBCache`,
       icon: <Refresh />,

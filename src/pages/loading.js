@@ -2,6 +2,7 @@ import { Box, Container, Stack } from "@mui/material";
 import { Grid } from "@mui/system";
 import Head from "next/head";
 import { CippImageCard } from "../components/CippCards/CippImageCard";
+import { PRODUCT_FULL_BRAND_SRC, PRODUCT_NAME } from "../constants/branding";
 
 import { ApiGetCall } from "../api/ApiCall";
 import { useState, useEffect } from "react";
@@ -13,9 +14,7 @@ const Page = () => {
     queryKey: "authmecipp",
   });
 
-  const [loadingImage, setLoadingImage] = useState(
-    "/assets/illustrations/undraw_analysis_dq08.svg"
-  );
+  const [loadingImage, setLoadingImage] = useState(PRODUCT_FULL_BRAND_SRC);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,7 +22,7 @@ const Page = () => {
         setLoadingText(
           "The function app may be experiencing a cold start currently, this can take a little longer than usual..."
         );
-        setLoadingImage("/assets/illustrations/undraw-into-the-night-nd84.svg");
+        setLoadingImage(PRODUCT_FULL_BRAND_SRC);
       }
     }, 20000); // 20 seconds
 
@@ -56,7 +55,7 @@ const Page = () => {
                   isFetching={false}
                   imageUrl={loadingImage}
                   text={loadingText}
-                  title="Logging into CIPP"
+                  title={`Signing in to ${PRODUCT_NAME}`}
                 />
               </Grid>
             </Grid>

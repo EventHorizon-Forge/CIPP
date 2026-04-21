@@ -1,4 +1,5 @@
 import {
+  Alert,
   Box,
   Container,
   Button,
@@ -7,6 +8,7 @@ import {
   ListItemIcon,
   ListItemText,
   SvgIcon,
+  Typography,
 } from '@mui/material'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
@@ -32,6 +34,7 @@ import { CippReportToolbar } from '../../components/CippComponents/CippReportToo
 import { Assessment as AssessmentIcon } from '@mui/icons-material'
 import ChevronDownIcon from '@heroicons/react/24/outline/ChevronDownIcon'
 import { CippHead } from '../../components/CippComponents/CippHead.jsx'
+import { DASHBOARD_INTRO, PRODUCT_NAME } from '../../constants/branding'
 
 const Page = () => {
   const settings = useSettings()
@@ -190,7 +193,20 @@ const Page = () => {
 
   return (
     <Container maxWidth={false} sx={{ mt: 12, mb: 6 }}>
-      <CippHead title="Dashboard" />
+      <CippHead title={`${PRODUCT_NAME} dashboard`} />
+      <Box sx={{ mb: 2 }}>
+        <Typography variant="h4" component="h1" sx={{ fontWeight: 600, mb: 0.5 }}>
+          {PRODUCT_NAME}
+        </Typography>
+        <Typography variant="body2" color="text.secondary" sx={{ maxWidth: 720 }}>
+          {DASHBOARD_INTRO}
+        </Typography>
+      </Box>
+      {!currentTenant && (
+        <Alert severity="info" sx={{ mb: 2 }}>
+          Select an organization in the header to load live metrics for that tenant.
+        </Alert>
+      )}
       <Box sx={{ width: '100%', mx: 'auto' }}>
         <Grid container spacing={2} alignItems="center" sx={{ mb: 2 }}>
           <Grid size={{ xs: 12, md: 4 }}>

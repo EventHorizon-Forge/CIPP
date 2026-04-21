@@ -1,4 +1,6 @@
-import { BuildingOfficeIcon, HomeIcon, UsersIcon, WrenchIcon } from '@heroicons/react/24/outline'
+import { BuildingOfficeIcon, CpuChipIcon, HomeIcon, UsersIcon, WrenchIcon } from '@heroicons/react/24/outline'
+import { PRODUCT_NAME } from '../constants/branding'
+import { getNexusNavChildItems } from '../constants/nexusLinks'
 import {
   CloudOutlined,
   HomeRepairService,
@@ -959,7 +961,7 @@ export const nativeMenuItems = [
     ],
   },
   {
-    title: 'CIPP',
+    title: PRODUCT_NAME,
     type: 'header',
     icon: (
       <SvgIcon>
@@ -1048,5 +1050,16 @@ export const nativeMenuItems = [
         ],
       },
     ],
+  },
+  {
+    title: 'NEXUS',
+    type: 'header',
+    icon: (
+      <SvgIcon>
+        <CpuChipIcon />
+      </SvgIcon>
+    ),
+    permissions: ['CIPP.*'],
+    items: getNexusNavChildItems(),
   },
 ]

@@ -14,6 +14,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { CippImageCard } from "../components/CippCards/CippImageCard";
 import { ErrorOutlineOutlined } from "@mui/icons-material";
+import { PRODUCT_FULL_BRAND_SRC, PRODUCT_NAME } from "../constants/branding";
 
 const ApiOfflinePage = () => {
   const [testingConnection, setTestingConnection] = useState(false);
@@ -98,19 +99,19 @@ const ApiOfflinePage = () => {
               <Grid size={{ md: 6, xs: 12 }}>
                 <CippImageCard
                   isFetching={false}
-                  imageUrl="/assets/illustrations/undraw_server_status_re_n8ln.svg"
+                  imageUrl={PRODUCT_FULL_BRAND_SRC}
                   title={
                     <Typography variant="h4" component="h1" gutterBottom>
                       <SvgIcon sx={{ verticalAlign: "middle", mr: 1, color: "error.main" }}>
                         <ErrorOutlineOutlined />
                       </SvgIcon>
-                      CIPP API Unreachable
+                      {PRODUCT_NAME} API unreachable
                     </Typography>
                   }
                   text={
                     <Box sx={{ mt: 2 }}>
                       <Typography variant="body1">
-                        The CIPP API appears to be offline or out of date.
+                        The {PRODUCT_NAME} API appears to be offline or out of date.
                         {apiVersion && (
                           <Typography
                             component="span"
@@ -122,7 +123,7 @@ const ApiOfflinePage = () => {
                       </Typography>
 
                       <Typography variant="body1" sx={{ mt: 2 }}>
-                        If you are self-hosting CIPP, please ensure your Function App is running and
+                        If you are self-hosting {PRODUCT_NAME}, please ensure your Function App is running and
                         up to date. If you are using the hosted version, please check your
                         subscription in GitHub.
                       </Typography>

@@ -543,9 +543,9 @@ const AlertWizard = () => {
               <Card>
                 <CardActionArea onClick={() => setAlertType('script')}>
                   <CardContent>
-                    <Typography variant="h6">Scripted CIPP Alert</Typography>
+                    <Typography variant="h6">Scripted AXIOM alert</Typography>
                     <Typography variant="body2">
-                      Select this option to set up an alert based on data processed by CIPP.
+                      Select this option to set up an alert based on data processed by AXIOM.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -868,7 +868,7 @@ const AlertWizard = () => {
               </Grid>
             )}
 
-            {/* Scripted CIPP Alert Form */}
+            {/* Scripted AXIOM alert form */}
             {alertType === 'script' && (
               <Grid container spacing={3} sx={{ mt: 2, width: '100%' }}>
                 <Grid size={12}>

@@ -552,7 +552,7 @@ const CippAddEditUser = (props) => {
               <Grid size={{ xs: 12 }}>
                 <Alert severity="info">
                   This will Purchase a new Sherweb License for the user, according to the terms and
-                  conditions with Sherweb. When the license becomes available, CIPP will assign the
+                  conditions with Sherweb. When the license becomes available, AXIOM will assign the
                   license to this user.
                 </Alert>
               </Grid>

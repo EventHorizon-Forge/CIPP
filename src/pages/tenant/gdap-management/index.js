@@ -186,7 +186,7 @@ const Page = () => {
                 {
                   title: "Map your Admin Roles",
                   description:
-                    "Use CIPP to map Admin Roles to Security Groups in your partner tenant.",
+                    "Use AXIOM to map Admin Roles to Security Groups in your partner tenant.",
                 },
                 {
                   title: "Create Role Templates",
@@ -198,7 +198,7 @@ const Page = () => {
                 },
                 {
                   title: "Setup Complete",
-                  description: "You're ready to start adding your tenants using CIPP.",
+                  description: "You're ready to start adding your tenants using AXIOM.",
                 },
               ]}
             />

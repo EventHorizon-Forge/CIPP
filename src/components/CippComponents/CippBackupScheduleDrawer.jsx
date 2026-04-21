@@ -81,7 +81,7 @@ export const CippBackupScheduleDrawer = ({
 
     const shippedValues = {
       TenantFilter: tenantFilter,
-      Name: `CIPP Backup - ${tenantFilter}`,
+      Name: `AXIOM Backup - ${tenantFilter}`,
       Command: { value: `New-CIPPBackup` },
       Parameters: {
         backupType: "Scheduled",
@@ -252,7 +252,7 @@ export const CippBackupScheduleDrawer = ({
             </Grid>
 
             <Grid size={{ xs: 12 }}>
-              <Typography variant="h6">CIPP</Typography>
+              <Typography variant="h6">AXIOM</Typography>
             </Grid>
             <Grid size={{ md: 6, xs: 12 }}>
               <CippFormComponent

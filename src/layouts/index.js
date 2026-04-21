@@ -25,6 +25,7 @@ import Page from "../pages/onboardingv2";
 import { useDialog } from "../hooks/use-dialog";
 import { nativeMenuItems } from "./config";
 import { CippBreadcrumbNav } from "../components/CippComponents/CippBreadcrumbNav";
+import { PRODUCT_NAME } from "../constants/branding";
 
 const SIDE_NAV_WIDTH = 270;
 const SIDE_NAV_PINNED_WIDTH = 50;
@@ -332,8 +333,9 @@ export const Layout = (props) => {
             <Box sx={{ flexGrow: 1, py: 2 }}>
               <Container maxWidth={false}>
                 <Alert severity="info">
-                  Setup has not been completed.
-                  <Button onClick={createDialog.handleOpen}>Start Wizard</Button>
+                  {PRODUCT_NAME} setup is not complete. Finish the setup wizard so staff can use all
+                  features.
+                  <Button onClick={createDialog.handleOpen}>Start wizard</Button>
                 </Alert>
               </Container>
             </Box>
@@ -345,10 +347,10 @@ export const Layout = (props) => {
                 <Grid container spacing={3}>
                   <Grid size={6}>
                     <CippImageCard
-                      title="Not supported"
+                      title="Organization required"
                       imageUrl="/assets/illustrations/undraw_website_ij0l.svg"
                       text={
-                        "The page does not support all Tenants, please select a different tenant using the tenant selector."
+                        "This page needs a single Microsoft 365 organization. Use the organization selector in the header to choose one organization (not All tenants)."
                       }
                     />
                   </Grid>

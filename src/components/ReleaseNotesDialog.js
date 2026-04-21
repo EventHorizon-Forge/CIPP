@@ -29,6 +29,7 @@ import packageInfo from '../../public/version.json'
 import { ApiGetCall } from '../api/ApiCall'
 import { GitHub } from '@mui/icons-material'
 import { CippAutoComplete } from './CippComponents/CippAutocomplete'
+import { PRODUCT_NAME } from '../constants/branding'
 
 const RELEASE_COOKIE_KEY = 'cipp_release_notice'
 const RELEASE_OWNER = 'KelvinTegelaar'
@@ -282,7 +283,7 @@ export const ReleaseNotesDialog = forwardRef((_props, ref) => {
   const requestedVersionLabel =
     selectedReleaseData?.releaseTag ?? selectedReleaseTag ?? releaseMeta.currentTag
   const releaseName =
-    selectedReleaseData?.name || selectedReleaseValue?.label || `CIPP ${releaseMeta.currentTag}`
+    selectedReleaseData?.name || selectedReleaseValue?.label || `${PRODUCT_NAME} ${releaseMeta.currentTag}`
   const releaseHeading = releaseName || requestedVersionLabel
   const releaseBody = typeof selectedReleaseData?.body === 'string' ? selectedReleaseData.body : ''
   const releaseUrl =

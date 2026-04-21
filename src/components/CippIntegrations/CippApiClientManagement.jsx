@@ -106,7 +106,7 @@ const CippApiClientManagement = () => {
           multiple: false,
           creatable: false,
           label: "Select Role",
-          placeholder: "Choose a role from the CIPP Role list.",
+          placeholder: "Choose a role from the AXIOM role list.",
           api: {
             url: "/api/ListCustomRole",
             queryKey: "CustomRoleList",
@@ -314,7 +314,7 @@ const CippApiClientManagement = () => {
         </Box>
         <CippDataTable
           actions={actions}
-          title="CIPP-API Clients"
+          title="API clients"
           api={{
             url: "/api/ExecApiClient",
             data: { Action: "List" },
@@ -357,7 +357,7 @@ const CippApiClientManagement = () => {
               valueField: "RoleName",
               showRefresh: true,
             },
-            placeholder: "Choose a role from the CIPP Role list.",
+            placeholder: "Choose a role from the AXIOM role list.",
           },
           {
             type: "autoComplete",
@@ -419,7 +419,7 @@ const CippApiClientManagement = () => {
             multiple: false,
             creatable: false,
             label: "Select Role",
-            placeholder: "Choose a role from the CIPP Role list.",
+            placeholder: "Choose a role from the AXIOM role list.",
             api: {
               url: "/api/ListCustomRole",
               queryKey: "CustomRoleList",

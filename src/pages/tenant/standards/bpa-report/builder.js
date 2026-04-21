@@ -281,7 +281,7 @@ const Page = () => {
                       </Grid>
                       <Grid size={{ xs: 12 }}>
                         <CippFormComponent
-                          label="Use information CIPP has previously gathered in another report"
+                          label="Use information AXIOM has previously gathered in another report"
                           name={`Fields.${index}.UseExistingInfo`} // Use correct index for the card
                           formControl={formControl}
                           type="switch"
@@ -302,7 +302,7 @@ const Page = () => {
                             options={[
                               { label: "Graph", value: "Graph" },
                               { label: "Exchange Online PowerShell", value: "Exchange" },
-                              { label: "CIPP Function", value: "CIPPFunction" },
+                              { label: "AXIOM function", value: "CIPPFunction" },
                             ]}
                             type="autoComplete"
                           />
@@ -366,7 +366,7 @@ const Page = () => {
                         >
                           <Grid size={{ xs: 12 }}>
                             <CippFormComponent
-                              label="CIPP Command (Get- only)"
+                              label="AXIOM command (Get- only)"
                               name={`Fields.${index}.Command`} // Corrected index
                               formControl={formControl}
                             />

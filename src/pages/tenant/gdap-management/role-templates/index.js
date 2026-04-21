@@ -62,7 +62,7 @@ const Page = () => {
         <>
           <Box>
             <Alert severity="warning" sx={{ mx: 3 }}>
-              The CIPP Defaults template is missing from the GDAP Role Templates. Create it now?
+              The default GDAP roles template is missing from the GDAP Role Templates. Create it now?
               <Button
                 size="small"
                 variant="outlined"
@@ -79,7 +79,7 @@ const Page = () => {
                   </SvgIcon>
                 }
               >
-                Create CIPP Defaults
+                Create default template
               </Button>
             </Alert>
           </Box>

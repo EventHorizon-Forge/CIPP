@@ -4,6 +4,7 @@ import { Breadcrumbs, Link, Typography, Box, IconButton, Tooltip } from "@mui/ma
 import { NavigateNext, History, AccountTree } from "@mui/icons-material";
 import { nativeMenuItems } from "../../layouts/config";
 import { useSettings } from "../../hooks/use-settings";
+import { PRODUCT_NAME } from "../../constants/branding";
 
 const MAX_HISTORY_STORAGE = 20; // Maximum number of pages to keep in history
 const MAX_BREADCRUMB_DISPLAY = 5; // Maximum number of breadcrumbs to display at once
@@ -121,7 +122,7 @@ export const CippBreadcrumbNav = () => {
         return;
       }
 
-      let pageTitle = document.title.replace(" - CIPP", "").trim();
+      let pageTitle = document.title.replace(` - ${PRODUCT_NAME}`, "").trim();
 
       // Remove tenant domain from title (e.g., "Groups - domain.onmicrosoft.com" -> "Groups")
       // But only if it looks like a domain (contains a dot)
@@ -136,7 +137,7 @@ export const CippBreadcrumbNav = () => {
       // Skip if title is empty, generic, or error page
       if (
         !pageTitle ||
-        pageTitle === "CIPP" ||
+        pageTitle === PRODUCT_NAME ||
         pageTitle.toLowerCase().includes("error") ||
         pageTitle === "404" ||
         pageTitle === "500"
@@ -282,7 +283,7 @@ export const CippBreadcrumbNav = () => {
           return;
         }
 
-        let pageTitle = document.title.replace(" - CIPP", "").trim();
+        let pageTitle = document.title.replace(` - ${PRODUCT_NAME}`, "").trim();
         const parts = pageTitle.split(" - ");
         const cleanTitle =
           parts.length > 1 && parts[parts.length - 1].includes(".")
@@ -292,7 +293,7 @@ export const CippBreadcrumbNav = () => {
         // Clean AllTenants from title
         const finalTitle = cleanPageTitle(cleanTitle);
 
-        if (finalTitle && finalTitle !== "CIPP" && !finalTitle.toLowerCase().includes("loading")) {
+        if (finalTitle && finalTitle !== PRODUCT_NAME && !finalTitle.toLowerCase().includes("loading")) {
           setCurrentPageTitle(finalTitle);
           // Stop checking once we have a valid title
           if (hierarchicalTitleCheckRef.current) {
@@ -475,7 +476,7 @@ export const CippBreadcrumbNav = () => {
       const lastItem = result[result.length - 1];
       if (lastItem.path && lastItem.path !== currentPath && currentPath.startsWith(lastItem.path)) {
         // Use the tracked page title if available, otherwise fall back to document.title
-        let tabTitle = currentPageTitle || document.title.replace(" - CIPP", "").trim();
+        let tabTitle = currentPageTitle || document.title.replace(` - ${PRODUCT_NAME}`, "").trim();
 
         // Clean AllTenants from title
         tabTitle = cleanPageTitle(tabTitle);
@@ -593,7 +594,7 @@ export const CippBreadcrumbNav = () => {
         // If we have a current page title from document.title, use it for the last breadcrumb
         if (
           currentPageTitle &&
-          currentPageTitle !== "CIPP" &&
+          currentPageTitle !== PRODUCT_NAME &&
           !currentPageTitle.toLowerCase().includes("loading")
         ) {
           breadcrumbs[breadcrumbs.length - 1].title = cleanPageTitle(currentPageTitle);

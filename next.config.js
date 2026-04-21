@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === 'production'
+
 /** @type {import('next').NextConfig} */
 const config = {
   reactStrictMode: false,
@@ -21,7 +23,12 @@ const config = {
   async redirects() {
     return []
   },
-  output: 'export',
+  async rewrites() {
+    if (isProd) return []
+    const origin = process.env.CIPP_LOCAL_API_ORIGIN || 'http://127.0.0.1:7071'
+    return [{ source: '/api/:path*', destination: `${origin}/api/:path*` }]
+  },
+  ...(isProd ? { output: 'export' } : {}),
   distDir: './out',
 }
 

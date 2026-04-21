@@ -7,11 +7,11 @@
     "logo": "/assets/integrations/cipp-api.png",
     "forceSyncButton": false,
     "hideTestButton": true,
-    "description": "The CIPP API allows you to access CIPP data outside of CIPP using a RESTful API.",
-    "helpText": "This integration allows you to enable CIPP-API access outside of CIPP. This is useful for integrations with other systems or custom scripts.",
+    "description": "The AXIOM API allows you to access AXIOM data outside of the web app using a RESTful API.",
+    "helpText": "This integration allows you to enable CIPP-API access outside of the AXIOM web app. This is useful for integrations with other systems or custom scripts.",
     "links": [
       {
-        "name": "CIPP API Documentation",
+        "name": "AXIOM API documentation",
         "url": "https://docs.cipp.app/api-documentation/setup-and-authentication"
       }
     ],
@@ -24,8 +24,8 @@
     "cat": "CSP",
     "logo": "/assets/integrations/sherweb.png",
     "logoDark": "/assets/integrations/sherweb_dark.png",
-    "description": "Enable the Sherweb integration to manage your CSP licensing from CIPP.",
-    "helpText": "This integration allows you to manage your CSP licensing from CIPP. Purchase new licenses while adding or editing users in CIPP. Not a Sherweb partner? Sign up for the Sherweb Cloud Services for MSPs program.",
+    "description": "Enable the Sherweb integration to manage your CSP licensing from AXIOM.",
+    "helpText": "This integration allows you to manage your CSP licensing from AXIOM. Purchase new licenses while adding or editing users in AXIOM. Not a Sherweb partner? Sign up for the Sherweb Cloud Services for MSPs program.",
     "mappingRequired": true,
     "links": [
       {
@@ -81,7 +81,7 @@
       {
         "type": "autoComplete",
         "name": "Sherweb.AllowedCustomRoles",
-        "label": "Select CIPP roles that are allowed to purchase licenses",
+        "label": "Select AXIOM roles that are allowed to purchase licenses",
         "api": {
           "url": "/api/ListCustomRole",
           "queryKey": "CustomRoles",
@@ -909,8 +909,8 @@
     "cat": "Source Control",
     "logo": "/assets/integrations/github.png",
     "logoDark": "/assets/integrations/github_dark.png",
-    "description": "Enable the GitHub integration to manage your repositories from CIPP.",
-    "helpText": "This integration allows you to manage GitHub repositories from CIPP, including the Community Repositories functionality. Requires a GitHub Personal Access Token (PAT) with a minimum of repo:public_repo permissions. If you plan on saving your templates to GitHub or accessing private/internal repositories, you will need to grant the whole repo scope. You can create a PAT in your GitHub account settings, see the GitHub Token documentation for more info. If you do not enable the extension, a read-only API will be provided.",
+    "description": "Enable the GitHub integration to manage your repositories from AXIOM.",
+    "helpText": "This integration allows you to manage GitHub repositories from AXIOM, including the Community Repositories functionality. Requires a GitHub Personal Access Token (PAT) with a minimum of repo:public_repo permissions. If you plan on saving your templates to GitHub or accessing private/internal repositories, you will need to grant the whole repo scope. You can create a PAT in your GitHub account settings, see the GitHub Token documentation for more info. If you do not enable the extension, a read-only API will be provided.",
     "links": [
       {
         "name": "GitHub Token",

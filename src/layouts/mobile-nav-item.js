@@ -100,6 +100,7 @@ export const MobileNavItem = (props) => {
       ? {
         component: 'a',
         href: path,
+        rel: 'noopener noreferrer',
         target: '_blank'
       }
       : {

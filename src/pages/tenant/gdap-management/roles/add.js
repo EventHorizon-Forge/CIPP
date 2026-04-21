@@ -155,7 +155,7 @@ const Page = () => {
                   </SvgIcon>
                 }
               >
-                Add CIPP Default Roles
+                Add default GDAP roles
               </Button>
             </Box>
             <CippFormComponent

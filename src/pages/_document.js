@@ -8,6 +8,7 @@ class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="icon" href="/AXIOMLogo.png" type="image/png" />
           <link
             rel="preconnect"
             href="https://fonts.googleapis.com"

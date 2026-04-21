@@ -35,7 +35,7 @@ const Page = () => {
       relationshipName.startsWith("CIPP_") ||
       relationshipName.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/)
     ) {
-      return "CIPP";
+      return "AXIOM";
     } else if (relationshipName.startsWith("LHSetup_")) {
       return "Lighthouse";
     } else {
@@ -171,11 +171,11 @@ const Page = () => {
               )
             ) ? (
               <Alert severity="success">
-                This relationship has all the CIPP recommended roles.
+                This relationship has all the AXIOM recommended roles.
               </Alert>
             ) : (
               <Alert severity="warning">
-                This relationship does not have all the CIPP recommended roles. See the{" "}
+                This relationship does not have all the AXIOM recommended roles. See the{" "}
                 <Link
                   href="https://docs.cipp.app/setup/installation/recommended-roles"
                   target="_blank"
