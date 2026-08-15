@@ -317,7 +317,7 @@ export const CippTenantSelector = React.forwardRef((props, ref) => {
             }}
             disabled={!currentTenant || currentTenant.value === "AllTenants"}
           >
-            <Tooltip title="Show organization details">
+            <Tooltip title="Show Organization Details">
               <SvgIcon>
                 <BuildingOfficeIcon fontSize="inherit" />
               </SvgIcon>
